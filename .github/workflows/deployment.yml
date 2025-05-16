@@ -7,10 +7,10 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
-# Add permissions for packages and contents
 permissions:
   contents: read
   packages: write
+  id-token: write
 
 jobs:
   build:
