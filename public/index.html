@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ma Todo List</h1>
+    
+    <div class="add-todo">
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Ajouter une tâche..." required>
+        <button type="submit" id="add-button">Ajouter</button>
+      </form>
+    </div>
+    
+    <div class="todos-container">
+      <div class="todos-header">
+        <h2>Mes Tâches</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Toutes</button>
+          <button class="filter-btn" data-filter="active">À faire</button>
+          <button class="filter-btn" data-filter="completed">Terminées</button>
+        </div>
+      </div>
+      
+      <ul id="todos-list"></ul>
+      
+      <div class="todos-footer">
+        <span id="items-left">0 tâches à faire</span>
+        <button id="clear-completed">Effacer terminées</button>
+      </div>
+    </div>
+  </div>
+
+  <template id="todo-template">
+    <li class="todo-item">
+      <div class="todo-content">
+        <input type="checkbox" class="todo-checkbox">
+        <span class="todo-text"></span>
+      </div>
+      <button class="delete-btn">×</button>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html> 
